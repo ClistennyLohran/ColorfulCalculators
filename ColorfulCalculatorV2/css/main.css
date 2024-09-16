@@ -1,0 +1,388 @@
+@charset "UTF-8";
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Fira Sans', sans-serif;
+  outline: none;
+  text-decoration: none;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+:root {
+  --corPrimaria: #222222;
+  --corPrimariaSombra: #2C2C2C;
+  --corSecundaria: #FFBB33;
+  --corSecundariaSombra: #fcaf16;
+  --corFocus: #ffffff;
+  --corTexto: #FFFFFF;
+  --corTextoEscuro: #222222;
+}
+
+body {
+  background: var(--corPrimaria);
+}
+
+body .mainContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+body .mainContainer .containerCalc {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background: var(--corPrimariaSombra);
+  z-index: 1;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+body .mainContainer .containerCalc .btn {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 120px;
+  height: 30px;
+  background: var(--corPrimaria);
+  color: var(--corTexto);
+  border: none;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+body .mainContainer .containerCalc .btn:hover {
+  color: var(--corSecundaria);
+}
+
+body .mainContainer .containerCalc .btn i {
+  margin-right: 10px;
+}
+
+body .mainContainer .containerCalc .title {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 480px;
+  height: 40px;
+  margin-bottom: 20px;
+  background: var(--corPrimaria);
+}
+
+body .mainContainer .containerCalc .title h1 {
+  position: absolute;
+  color: var(--corSecundaria);
+  font-size: 18px;
+  z-index: 1;
+}
+
+body .mainContainer .containerCalc .title h1 i {
+  margin-right: 10px;
+}
+
+body .mainContainer .containerCalc .title::before {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 20px;
+  margin-top: 40px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background: var(--corPrimaria);
+  z-index: 0;
+}
+
+body .mainContainer .containerCalc .calcActionContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 480px;
+  height: 320px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  background: var(--corPrimaria);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+body .mainContainer .containerCalc .calcActionContainer .input input {
+  width: 280px;
+  height: 25px;
+  text-align: center;
+  background: var(--corPrimariaSombra);
+  color: var(--corTexto);
+  border: none;
+  border-bottom: 2px solid var(--corSecundaria);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+body .mainContainer .containerCalc .calcActionContainer .select select {
+  width: 280px;
+  height: 30px;
+  background: var(--corPrimariaSombra);
+  color: var(--corTexto);
+  margin-top: 10px;
+  padding-left: 10px;
+  text-align: center;
+  border: none;
+  border-bottom: 2px solid var(--corSecundaria);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+body .mainContainer .containerCalc .calcActionContainer .select select:focus {
+  border-bottom: 2px solid var(--corFocus);
+}
+
+body .mainContainer .containerCalc .calcActionContainer .input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .mainContainer .containerCalc .calcActionContainer .input label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10px;
+  width: 80px;
+  height: 15px;
+  font-size: 12px;
+  font-weight: bold;
+  background: var(--corSecundaria);
+  color: var(--corTextoEscuro);
+}
+
+body .mainContainer .containerCalc .calcActionContainer .input input:focus {
+  border-bottom: 2px solid var(--corFocus);
+}
+
+body .mainContainer .containerCalc .calcActionContainer .calcBtn {
+  width: 280px;
+  height: 30px;
+  background: var(--corPrimariaSombra);
+  color: var(--corTexto);
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin: 20px 0;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+body .mainContainer .containerCalc .calcActionContainer .calcBtn:hover {
+  border-bottom: 2px solid var(--corSecundaria);
+}
+
+body .mainContainer .containerCalc .calcActionContainer::before {
+  position: absolute;
+  content: '';
+  width: 480px;
+  height: 320px;
+  margin-top: 4px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: var(--corSecundaria);
+  z-index: -1;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+body .mainContainer .containerColorChanger {
+  position: relative;
+  left: -260px;
+  height: 100vh;
+  width: 0px;
+  min-width: 0px;
+  background: var(--corPrimaria);
+  border-right: 0px solid var(--corSecundaria);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  overflow-y: scroll;
+}
+
+body .mainContainer .containerColorChanger .optionBar {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+body .mainContainer .containerColorChanger .optionBar .titleBar {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 30px;
+  font-weight: bold;
+  font-size: 14px;
+  background: var(--corSecundaria);
+  color: var(--corTextoEscuro);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+body .mainContainer .containerColorChanger .optionBar .titleBar p {
+  margin-left: 5px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+body .mainContainer .containerColorChanger .optionBar .titleBar .openCloseContainer {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  right: 0;
+  width: 25px;
+  height: 25px;
+  font-size: 20px;
+  color: var(--corTextoEscuro);
+  cursor: pointer;
+  margin-right: 5px;
+  border-radius: 100%;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+body .mainContainer .containerColorChanger .optionBar .titleBar .openCloseContainer:hover {
+  color: var(--corPrimariaSombra);
+}
+
+body .mainContainer .containerColorChanger .optionBar .contentBar {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  left: -260px;
+  height: 0px;
+  background: var(--corPrimaria);
+  opacity: 0;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+body .mainContainer .containerColorChanger .optionBar .contentBar .input input {
+  margin-top: 10px;
+  text-align: center;
+  width: 200px;
+  height: 25px;
+  border: none;
+  border-bottom: 2px solid var(--corSecundaria);
+  background: var(--corPrimariaSombra);
+  color: var(--corTexto);
+}
+
+body .mainContainer .containerColorChanger .optionBar .contentBar .colorPalette {
+  width: 200px;
+  height: 60px;
+  border: none;
+  background: var(--corPrimaria);
+}
+
+::-webkit-scrollbar {
+  /* Largura do caminho por onde a scrollbar passa. */
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  /* Propriedades serão aplicadas a scrollbar. */
+  background-image: -webkit-gradient(linear, left bottom, left top, from(var(--corSecundaria)), to(var(--corSecundariaSombra)));
+  background-image: linear-gradient(to top, var(--corSecundaria), var(--corSecundariaSombra));
+}
+
+::-webkit-scrollbar-track {
+  /* Cor do background por onde a scrollbar passa */
+  background-color: var(--corPrimariaSombra);
+}
+
+input[type="color"] {
+  -webkit-appearance: none;
+  border: none;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-bottom: 2px dotted var(--corSecundaria);
+  border-top: 2px dotted var(--corSecundaria);
+  border-left: 2px dotted var(--corSecundaria);
+  border-right: 2px dotted var(--corSecundaria);
+}
+/*# sourceMappingURL=main.css.map */

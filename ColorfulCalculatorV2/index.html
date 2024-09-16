@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Calculator</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/5360ef20c9.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="mainContainer">
+      <div id="containerCalc" class="containerCalc">
+        <button id="closeBar" class="btn closeBar"><i class="fa-solid fa-arrow-right-arrow-left"></i> ABRIR</button>
+        <div class="title">
+          <h1><i class="fa-solid fa-calculator"></i> COLORFUL CALCULATOR</h1>
+        </div>
+        <div class="calcActionContainer">
+          <form>
+            <div class="input">
+              <label for="numero1">NUMERO 1</label>
+              <input name="numero1" id="numero1" type="number" required>
+            </div>
+            <div class="select">
+              <select name="operador" id="operador">
+                <option value="0" selected disabled>Selecione uma Operação</option>
+                <option value="1">Soma</option>
+                <option value="2">Subtração</option>
+                <option value="3">Multiplicação</option>
+                <option value="4">Divisão</option>
+              </select>
+            </div>
+            <div class="input">
+              <label for="numero2">NUMERO 2</label>
+              <input name="numero2" id="numero2" type="number" required>
+            </div>
+            <button class="calcBtn" onclick="calculate(event)">CALCULAR</button>
+            <div class="input">
+              <input id="resultado" type="text" placeholder="Resultado" disabled>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div id="containerColorChanger" class="containerColorChanger">
+        <div class="optionBar">
+          <div class="titleBar">
+            <p><i class="fa-solid fa-palette"></i> COR PRIMARIA</p>
+            <div id="openClose01" class="openCloseContainer">
+              <i class="fa-solid fa-angle-up"></i>
+            </div>
+          </div>
+          <div id="contentBar01" class="contentBar">
+            <input id="color01" class="colorPalette" type="color">
+            <div class="input">
+              <input name="cor01" id="cor01" type="text" placeholder="#000000" disabled>
+            </div>
+          </div>
+        </div>
+        <div class="optionBar">
+          <div class="titleBar">
+            <p><i class="fa-solid fa-palette"></i> COR PRIMARIA SOMBRA</p>
+            <div id="openClose02" class="openCloseContainer">
+              <i class="fa-solid fa-angle-up"></i>
+            </div>
+          </div>
+          <div id="contentBar02" class="contentBar">
+            <input id="color02" class="colorPalette" type="color">
+            <div class="input">
+              <input name="cor02" id="cor02" type="text" placeholder="#000000" disabled>
+            </div>
+          </div>
+        </div>
+        <div class="optionBar">
+          <div class="titleBar">
+            <p><i class="fa-solid fa-palette"></i> COR SECUNDARIA</p>
+            <div id="openClose03" class="openCloseContainer">
+              <i class="fa-solid fa-angle-up"></i>
+            </div>
+          </div>
+          <div id="contentBar03" class="contentBar">
+            <input id="color03" class="colorPalette" type="color">
+            <div class="input">
+              <input name="cor03" id="cor03" type="text" placeholder="#000000" disabled>
+            </div>
+          </div>
+        </div>
+        <div class="optionBar">
+          <div class="titleBar">
+            <p><i class="fa-solid fa-palette"></i> COR SECUNDARIA SOMBRA</p>
+            <div id="openClose04" class="openCloseContainer">
+              <i class="fa-solid fa-angle-up"></i>
+            </div>
+          </div>
+          <div id="contentBar04" class="contentBar">
+            <input id="color04" class="colorPalette" type="color">
+            <div class="input">
+              <input name="cor04" id="cor04" type="text" placeholder="#000000" disabled>
+            </div>
+          </div>
+        </div>
+        <div class="optionBar">
+          <div class="titleBar">
+            <p><i class="fa-solid fa-palette"></i> COR FOCUS</p>
+            <div id="openClose05" class="openCloseContainer">
+              <i class="fa-solid fa-angle-up"></i>
+            </div>
+          </div>
+          <div id="contentBar05" class="contentBar">
+            <input id="color05" class="colorPalette" type="color">
+            <div class="input">
+              <input name="cor05" id="cor05" type="text" placeholder="#000000" disabled>
+            </div>
+          </div>
+        </div>
+        <div class="optionBar">
+          <div class="titleBar">
+            <p><i class="fa-solid fa-palette"></i> COR TEXTO 1</p>
+            <div id="openClose06" class="openCloseContainer">
+              <i class="fa-solid fa-angle-up"></i>
+            </div>
+          </div>
+          <div id="contentBar06" class="contentBar">
+            <input id="color06" class="colorPalette" type="color">
+            <div class="input">
+              <input name="cor06" id="cor06" type="text" placeholder="#000000" disabled>
+            </div>
+          </div>
+        </div>
+        <div class="optionBar">
+          <div class="titleBar">
+            <p><i class="fa-solid fa-palette"></i> COR TEXTO 2</p>
+            <div id="openClose07" class="openCloseContainer">
+              <i class="fa-solid fa-angle-up"></i>
+            </div>
+          </div>
+          <div id="contentBar07" class="contentBar">
+            <input id="color07" class="colorPalette" type="color">
+            <div class="input">
+              <input name="cor07" id="cor07" type="text" placeholder="#000000" disabled>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/colors.js"></script>
+  </body>
+</html>

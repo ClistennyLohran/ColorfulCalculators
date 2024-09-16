@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <title>Colorful Calculator 3</title>
+  </head>
+  <body>
+    <div class="body bright">
+      <div class="topColorsContainer">
+        <ul>
+          <li>
+            <input id="calculatorColor" class="colorPicker" type="color" value="#242A4C">
+          </li>
+          <li>
+            <input id="screenButtonsColor" class="colorPicker" type="color" value="#343957">
+          </li>
+          <li>
+            <input id="operatorsColor" class="colorPicker" type="color" value="#4F556F">
+          </li>
+          <li>
+            <input id="backgroundColor" class="colorPicker" type="color" value="#767B98">
+          </li>
+          <li>
+            <input id="spaceAndOperatorsFontColor" class="colorPicker" type="color" value="#FF3664">
+          </li>
+          <li>
+            <input id="normalFontColor" class="colorPicker" type="color" value="#EFEFEF">
+          </li>
+        </ul>
+      </div>
+      <form class="calculator" name="calc">
+        <div class="calculatorContainer">
+          <div class="calculatorTitle">
+            <p>Colorful Calculator v3</p>
+          </div>
+          <div class="screen">
+            <div class="supScreen">
+              <input id="display" type="text" name="sup" readonly="">
+            </div>
+            <div class="mainScreen">
+              <input id="mainDisplay" type="text" name="result" readonly="">
+            </div>
+          </div>
+          <div class="calculatorButtons">
+            <span onclick="{document.calc.sup.value = '', document.calc.result.value = ''}" class="num specialColor">CE</span>
+            <span onclick="document.calc.result.value = ''" class="num specialColor">C</span>
+            <span onclick="document.calc.sup.value += ' % '" class="num specialColor">%</span>
+            <span onclick="document.calc.sup.value += ' / '" class="num specialColor">/</span>
+            <span onclick="document.calc.sup.value += '1'" class="num bright">1</span>
+            <span onclick="document.calc.sup.value += '2'" class="num bright">2</span>
+            <span onclick="document.calc.sup.value += '3'" class="num bright">3</span>
+            <span onclick="document.calc.sup.value += ' * '" class="num specialColor">x</span>
+            <span onclick="document.calc.sup.value += '4'" class="num bright">4</span>
+            <span onclick="document.calc.sup.value += '5'" class="num bright">5</span>
+            <span onclick="document.calc.sup.value += '6'" class="num bright">6</span>
+            <span onclick="document.calc.sup.value += ' - '" class="num specialColor">-</span>
+            <span onclick="document.calc.sup.value += '7'" class="num bright">7</span>
+            <span onclick="document.calc.sup.value += '8'" class="num bright">8</span>
+            <span onclick="document.calc.sup.value += '9'" class="num bright">9</span>
+            <span onclick="document.calc.sup.value += ' + '" class="num specialColor">+</span>
+            <span onclick="document.calc.sup.value += '0'" class="num columnExtra">0</span>
+            <span onclick="document.calc.sup.value += '.'" class="num bright">.</span>
+            <span onclick="document.calc.result.value = eval(calc.sup.value)" class="num color">=</span>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

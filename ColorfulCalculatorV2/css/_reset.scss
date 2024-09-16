@@ -1,0 +1,21 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+//font-family: 'Fira Sans', sans-serif;
+
+* {
+  padding: 0;
+  margin: 0;
+
+  font-family: 'Fira Sans', sans-serif;
+
+  outline: none;
+  text-decoration: none;
+}
+ul, ol, li {
+  list-style: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

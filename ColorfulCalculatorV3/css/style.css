@@ -1,0 +1,196 @@
+:root {
+  --calculatorColor: #242A4C;
+
+  --screenButtonsColor: #343957;
+  --operatorsColor: #4F556F;
+  --backgroundColor: #767B98;
+  --spaceAndOperatorsFontColor: #FF3664;
+  --normalFontColor: #EFEFEF;
+  --borderColor: #FFFFFF;
+
+  --SelectionColor: #ffffff;
+}
+
+body {
+  background: var(--backgroundColor);
+}
+.body {
+  display: flex;
+
+  align-items: center;
+
+  flex-direction: column;
+
+  width: 100%;
+  height: 100vh;
+
+  background: var(--backgroundColor);
+}
+.topColorsContainer {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 510px;
+  height: 90px;
+
+  margin-top: 10px;
+
+  background: var(--calculatorColor);
+}
+.topColorsContainer ul {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+.colorPicker {
+  width: 60px;
+  height: 60px;
+
+  border: 2px solid var(--borderColor);
+  outline: none;
+
+  appearance: none;
+  -webkit-appearance: none; 
+
+  padding: 0;
+  margin: 0px 10px;
+
+  cursor: pointer;
+}
+
+/* Calculator Design */
+
+.calculatorContainer {
+  width: 490px;
+  height: 680px;
+
+  padding: 10px;
+
+  margin-top: 20px;
+
+  background: var(--calculatorColor);
+}
+.calculatorTitle {
+  display: flex;
+
+  justify-content: center;
+
+  width: 100%;
+  height: 30px;
+
+  color: var(--normalFontColor);
+}
+.screen {
+  width: 96%;
+  height: 100px;
+
+  padding-left: 2%;
+  padding-right: 2%;
+
+  background: var(--screenButtonsColor);
+  color: var(--normalFontColor);
+}
+.screen input {
+  width: 100%;
+  height: 100%;
+
+  border: none;
+  text-align: end;
+
+  background: var(--screenButtonsColor);
+  color: var(--normalFontColor);
+}
+.supScreen {
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-end;
+
+  width: 100%;
+  height: 35px;
+
+  color: var(--normalFontColor);
+}
+.supScreen input {
+  font-size: 20px;
+}
+.mainScreen {
+  display: flex;
+
+  justify-content: flex-end;
+
+  width: 100%;
+  height: 65px;
+}
+.mainScreen input {
+  font-size: 50px;
+}
+.calculatorButtons {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+}
+.num {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 117.5px;
+  height: 105px;
+
+  margin-right: 6.5px;
+  margin-top: 5px;
+
+  font-size: 30px;
+
+  color: var(--normalFontColor);
+  background: var(--screenButtonsColor);
+
+  transition: filter 0.3s ease-in-out;
+  cursor: pointer;
+}
+.num:hover {
+  filter: brightness(0.8);
+}
+.columnExtra {
+  grid-column: span 2;
+
+  width: 242px;
+}
+.specialColor {
+  background: var(--operatorsColor);
+  color: var(--spaceAndOperatorsFontColor);
+
+  transition: filter 0.3s ease-in-out;
+}
+.specialColor:hover {
+  filter: brightness(0.8);
+}
+.color {
+  background: var(--spaceAndOperatorsFontColor);
+  color: var(--normalFontColor);
+
+  font-size: 42px;
+
+  transition: filter 0.3s ease-in-out;
+}
+.color:hover {
+  filter: brightness(0.8);
+}
+
+.animation {
+  animation: anim 0.5s infinite alternate linear;
+}
+
+@keyframes anim {
+  0% {
+    filter: brightness(1);
+  }
+  100% {
+    filter: brightness(0.5);
+  }
+}
