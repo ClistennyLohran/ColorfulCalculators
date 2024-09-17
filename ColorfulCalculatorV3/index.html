@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js"></script>
     <title>Colorful Calculator 3</title>
   </head>
@@ -13,22 +13,52 @@
       <div class="topColorsContainer">
         <ul>
           <li>
-            <input id="calculatorColor" class="colorPicker" type="color" value="#242A4C">
+            <input
+              id="calculatorColor"
+              class="colorPicker"
+              type="color"
+              value="#242A4C"
+            />
           </li>
           <li>
-            <input id="screenButtonsColor" class="colorPicker" type="color" value="#343957">
+            <input
+              id="screenButtonsColor"
+              class="colorPicker"
+              type="color"
+              value="#343957"
+            />
           </li>
           <li>
-            <input id="operatorsColor" class="colorPicker" type="color" value="#4F556F">
+            <input
+              id="operatorsColor"
+              class="colorPicker"
+              type="color"
+              value="#4F556F"
+            />
           </li>
           <li>
-            <input id="backgroundColor" class="colorPicker" type="color" value="#767B98">
+            <input
+              id="backgroundColor"
+              class="colorPicker"
+              type="color"
+              value="#767B98"
+            />
           </li>
           <li>
-            <input id="spaceAndOperatorsFontColor" class="colorPicker" type="color" value="#FF3664">
+            <input
+              id="spaceAndOperatorsFontColor"
+              class="colorPicker"
+              type="color"
+              value="#FF3664"
+            />
           </li>
           <li>
-            <input id="normalFontColor" class="colorPicker" type="color" value="#EFEFEF">
+            <input
+              id="normalFontColor"
+              class="colorPicker"
+              type="color"
+              value="#EFEFEF"
+            />
           </li>
         </ul>
       </div>
@@ -39,35 +69,181 @@
           </div>
           <div class="screen">
             <div class="supScreen">
-              <input id="display" type="text" name="sup" readonly="">
+              <input id="display" type="text" name="sup" readonly="" />
             </div>
             <div class="mainScreen">
-              <input id="mainDisplay" type="text" name="result" readonly="">
+              <input id="mainDisplay" type="text" name="result" readonly="" />
             </div>
           </div>
           <div class="calculatorButtons">
-            <span onclick="{document.calc.sup.value = '', document.calc.result.value = ''}" class="num specialColor">CE</span>
-            <span onclick="document.calc.result.value = ''" class="num specialColor">C</span>
-            <span onclick="document.calc.sup.value += ' % '" class="num specialColor">%</span>
-            <span onclick="document.calc.sup.value += ' / '" class="num specialColor">/</span>
-            <span onclick="document.calc.sup.value += '1'" class="num bright">1</span>
-            <span onclick="document.calc.sup.value += '2'" class="num bright">2</span>
-            <span onclick="document.calc.sup.value += '3'" class="num bright">3</span>
-            <span onclick="document.calc.sup.value += ' * '" class="num specialColor">x</span>
-            <span onclick="document.calc.sup.value += '4'" class="num bright">4</span>
-            <span onclick="document.calc.sup.value += '5'" class="num bright">5</span>
-            <span onclick="document.calc.sup.value += '6'" class="num bright">6</span>
-            <span onclick="document.calc.sup.value += ' - '" class="num specialColor">-</span>
-            <span onclick="document.calc.sup.value += '7'" class="num bright">7</span>
-            <span onclick="document.calc.sup.value += '8'" class="num bright">8</span>
-            <span onclick="document.calc.sup.value += '9'" class="num bright">9</span>
-            <span onclick="document.calc.sup.value += ' + '" class="num specialColor">+</span>
-            <span onclick="document.calc.sup.value += '0'" class="num columnExtra">0</span>
-            <span onclick="document.calc.sup.value += '.'" class="num bright">.</span>
-            <span onclick="document.calc.result.value = eval(calc.sup.value)" class="num color">=</span>
+            <span id="calc_button_CE" class="num specialColor">CE</span>
+            <span id="calc_button_C" class="num specialColor">C</span>
+            <span id="calc_button_%" class="num specialColor">%</span>
+            <span id="calc_button_/" class="num specialColor">/</span>
+            <span id="calc_button_1" class="num bright">1</span>
+            <span id="calc_button_2" class="num bright">2</span>
+            <span id="calc_button_3" class="num bright">3</span>
+            <span id="calc_button_x" class="num specialColor">x</span>
+            <span id="calc_button_4" class="num bright">4</span>
+            <span id="calc_button_5" class="num bright">5</span>
+            <span id="calc_button_6" class="num bright">6</span>
+            <span id="calc_button_-" class="num specialColor">-</span>
+            <span id="calc_button_7" class="num bright">7</span>
+            <span id="calc_button_8" class="num bright">8</span>
+            <span id="calc_button_9" class="num bright">9</span>
+            <span id="calc_button_+" class="num specialColor">+</span>
+            <span id="calc_button_0" class="num columnExtra">0</span>
+            <span id="calc_button_." class="num bright">.</span>
+            <span id="calc_button_=" class="num color">=</span>
           </div>
         </div>
       </form>
     </div>
   </body>
 </html>
+
+<script>
+  // Non-interactive DOM elements should not have an interactive handler (Web:S6848)
+  document
+    .getElementById("calc_button_1")
+    .addEventListener("click", function () {
+      document.calc.sup.value += "1";
+    });
+  document
+    .getElementById("calc_button_2")
+    .addEventListener("click", function () {
+      document.calc.sup.value += "2";
+    });
+  document
+    .getElementById("calc_button_3")
+    .addEventListener("click", function () {
+      document.calc.sup.value += "3";
+    });
+  document
+    .getElementById("calc_button_4")
+    .addEventListener("click", function () {
+      document.calc.sup.value += "4";
+    });
+  document
+    .getElementById("calc_button_5")
+    .addEventListener("click", function () {
+      document.calc.sup.value += "5";
+    });
+  document
+    .getElementById("calc_button_6")
+    .addEventListener("click", function () {
+      document.calc.sup.value += "6";
+    });
+  document
+    .getElementById("calc_button_7")
+    .addEventListener("click", function () {
+      document.calc.sup.value += "7";
+    });
+  document
+    .getElementById("calc_button_8")
+    .addEventListener("click", function () {
+      document.calc.sup.value += "8";
+    });
+  document
+    .getElementById("calc_button_9")
+    .addEventListener("click", function () {
+      document.calc.sup.value += "9";
+    });
+  document
+    .getElementById("calc_button_0")
+    .addEventListener("click", function () {
+      document.calc.sup.value += "0";
+    });
+  document
+    .getElementById("calc_button_+")
+    .addEventListener("click", function () {
+      // A checagem verifica se o último caractere não é um operador e se o campo de texto não está vazio
+      if (
+        !document.calc.sup.value.slice(-1).match(/[+\-*/\s]/) &&
+        document.calc.sup.value.trim() != ""
+      ) {
+        document.calc.sup.value += " + ";
+      }
+    });
+  document
+    .getElementById("calc_button_-")
+    .addEventListener("click", function () {
+      // A checagem verifica se o último caractere não é um operador e se o campo de texto não está vazio
+      if (
+        !document.calc.sup.value.slice(-1).match(/[+\-*/\s]/) &&
+        document.calc.sup.value.trim() != ""
+      ) {
+        document.calc.sup.value += " - ";
+      }
+    });
+  document
+    .getElementById("calc_button_x")
+    .addEventListener("click", function () {
+      // A checagem verifica se o último caractere não é um operador e se o campo de texto não está vazio
+      if (
+        !document.calc.sup.value.slice(-1).match(/[+\-*/\s]/) &&
+        document.calc.sup.value.trim() != ""
+      ) {
+        document.calc.sup.value += " * ";
+      }
+    });
+  document
+    .getElementById("calc_button_/")
+    .addEventListener("click", function () {
+      // A checagem verifica se o último caractere não é um operador e se o campo de texto não está vazio
+      if (
+        !document.calc.sup.value.slice(-1).match(/[+\-*/\s]/) &&
+        document.calc.sup.value.trim() != ""
+      ) {
+        document.calc.sup.value += " / ";
+      }
+    });
+  document
+    .getElementById("calc_button_%")
+    .addEventListener("click", function () {
+      // A checagem verifica se o último caractere não é um operador e se o campo de texto não está vazio
+      if (
+        !document.calc.sup.value.slice(-1).match(/[+\-*/\s]/) &&
+        document.calc.sup.value.trim() != ""
+      ) {
+        document.calc.sup.value += " % ";
+      }
+    });
+  document
+    .getElementById("calc_button_.")
+    .addEventListener("click", function () {
+      // A checagem verifica se
+      // 1. O último caractere não é um ponto
+      // 2. O último caractere não é um operador
+      // 3. O campo de texto não está vazio
+      // 4. O último número não contém um ponto
+
+      const lastNumber = document.calc.sup.value.split(" ").slice(-1)[0];
+      console.log(lastNumber);
+
+      if (
+        document.calc.sup.value.slice(-1) != "." &&
+        !document.calc.sup.value.slice(-1).match(/[+\-*/\s]/) &&
+        document.calc.sup.value.trim() != "" &&
+        !lastNumber.includes(".")
+      ) {
+        document.calc.sup.value += ".";
+      }
+    });
+  document
+    .getElementById("calc_button_C")
+    .addEventListener("click", function () {
+      document.calc.result.value = "";
+    });
+  document
+    .getElementById("calc_button_CE")
+    .addEventListener("click", function () {
+      document.calc.sup.value = "";
+      document.calc.result.value = "";
+    });
+  document
+    .getElementById("calc_button_=")
+    .addEventListener("click", function () {
+      document.calc.result.value = eval(calc.sup.value);
+    });
+</script>
